@@ -37,13 +37,7 @@
         <template slot-scope="{row}">
           <template v-if="row.edit">
             <el-input v-model="row.title" class="edit-input" size="small" />
-            <el-button
-              class="cancel-btn"
-              size="small"
-              icon="el-icon-refresh"
-              type="warning"
-              @click="cancelEdit(row)"
-            >
+            <el-button class="cancel-btn" size="small" icon="el-icon-refresh" type="warning" @click="cancelEdit(row)">
               cancel
             </el-button>
           </template>
@@ -62,13 +56,7 @@
           >
             Ok
           </el-button>
-          <el-button
-            v-else
-            type="primary"
-            size="small"
-            icon="el-icon-edit"
-            @click="row.edit=!row.edit"
-          >
+          <el-button v-else type="primary" size="small" icon="el-icon-edit" @click="row.edit = !row.edit">
             Edit
           </el-button>
         </template>
@@ -141,6 +129,7 @@ export default {
 .edit-input {
   padding-right: 100px;
 }
+
 .cancel-btn {
   position: absolute;
   right: 15px;
